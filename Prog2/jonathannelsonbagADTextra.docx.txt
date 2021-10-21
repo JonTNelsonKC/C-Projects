@@ -1,0 +1,54 @@
+Pseudo Code for Union, Intersection and Difference
+For the bag ADT from the slides write the pseudo code for Union, Intersection and Difference 
+
+Submit a word doc name <yourname>bagADTextra.docx
+
+The union of two bags is a new bag containing the combined contents of the original two bags. Design and specify a method union for the ADT bag that returns as a new bag the union of the bag receiving the call to the method and the bag that is the method’s one argument. Include sufficient comments to fully specify the method. Note that the union of two bags might contain duplicate items. For example, if object x occurs five times in one bag and twice in another, the union of these bags contains x seven times. Specifically, suppose that bag1 and bag2 are bags; bag1 contains the strings a, b, and c; and bag2 contains the strings b, b, d, and e. The expression bag1.union(bag2) returns a bag containing the strings a, b, b, b, c, d, and e. Note that union does not affect the contents of bag1 and bag2.
+
+The intersection of two bags is a new bag containing the entries that occur in both of the original two bags. Design and specify a method intersection for the ADT bag that returns as a new bag the intersection of the bag receiving the call to the method and the bag that is the method’s one argument. Include sufficient comments to fully specify the method. Note that the intersection of two bags might contain duplicate items. For example, if object x occurs five times in one bag and twice in another, the intersection of these bags contains x two times. Specifically, suppose that bag1 and bag2 are bags; bag1 contains the strings a, b, and c; and bag2 contains the strings b, b, d, and e. The expression bag1.intersection(bag2) returns a bag containing only the string b. Note that intersection does not affect the contents of bag1 and bag2.
+
+The difference of two bags is a new bag containing the entries that would be left in one bag after removing those that also occur in the second. Design and specify a method difference for the ADT bag that returns as a new bag the difference of the bag receiving the call to the method and the bag that is the method’s one argument. Include sufficient comments to fully specify the method. Note that the difference of two bags might contain duplicate items. For example, if object x occurs five times in one bag and twice in another, the difference of these bags contains x three times. Specifically, suppose that bag1 and bag2 are bags; bag1 contains the strings a, b, and c; and bag2 contains the strings b, b, d, and e. The expression bag1.difference(bag2) returns a bag containing only the strings a and c. Note that difference does not affect the contents of bag1 and bag2.
+
+
+Consider the bag to be an abstract data type.
+ We are specifying an abstraction inspired by an actual physical bag
+ Doesn’t do much more than contain its items
+ Can unordered and possibly duplicate objects
+ We insist objects be of same or similar types
+ Knowing just its interface
+ Can use ADT bag in a program
+
+
+bag union(bag1, bag2){
+
+	Create new bag named unionBag.
+	Use the contains member function to see what is in bag1.
+	Add everything from bag1 (including duplicates) to unionBag.
+
+	Use the contains member function to see what is in bag2.
+	Add everything from bag2 (including duplicates) to unionBag.
+
+	return unionBag
+}
+
+bag intersection(bag1, bag2){
+
+	Create new bag named intersectionBag.
+	See what is in bag1 using the contains member function.
+	consider duplicates using getFrequencyOf member function.
+
+	Use the an if statement that checks if bag2 contains any of the items from bag1 using the above searching method.
+
+	return intersectionBag
+}
+
+bag difference(bag1, bag2){
+
+	Create new bag named differenceBag.
+	set differenceBag = to bag1.
+
+	Use a while loop to itereate through all items in bag2, then inside the loop, use an if statement, if an item is in bag2 use the remove member function to remove the item from differenceBag.
+
+	return differenceBag
+}
+

@@ -1,0 +1,23 @@
+
+
+To compile => g++ Itemtype.cpp unsorted.cpp deck.cpp deckdriver.cpp
+
+
+Program 2
+8 Up Solitaire Game:
+
+Using the Deck code given for Homework1 with the shuffle algorithm that you wrote. (if your shuffle code does not work I will approve using the original shuffle.).
+
+Write a program that will play the solitaire game 8 up described in lab on 09/30/21 (8 cards facing up in working stacks, cover cards on stacks when you have 2 cards that match by rank, see if you can use the whole deck)
+
+Your program will list the 8 cards that are on the top of the stacks in each round of play. 
+
+If you run out of plays the program will tell the user they lost that round and how many cards you dealt that round.
+
+At that point your program will reset the deck, shuffle, print the shuffled deck and start dealing again. Keep a of counter of how many shuffles have been done.
+
+When a winning hand has been dealt you should tell how many shuffles it took to get to the winning hand. 
+
+Then prompt the user if they want to play another round.
+
+turn in the main driver of the program as 8up<your name>.cpp and deck<your name>.cpp  and deck<your name>.h have your driver include deck<your name>.h You should not need to modify item_type or unsorted files.

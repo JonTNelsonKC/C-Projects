@@ -1,0 +1,4 @@
+All you have to do for this assignment is come up with a different shuffling algorithm...
+
+
+g++ Itemtype.cpp unsorted.cpp deck.cpp deckdriver.cpp
